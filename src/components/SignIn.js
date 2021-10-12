@@ -55,7 +55,7 @@ export default function SignIn() {
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        <Link to="/signup">Already have account? Sign Up</Link>
+        <Link to="/signup">Doesn't have account? Sign Up</Link>
       </div>
     </div>
   )
