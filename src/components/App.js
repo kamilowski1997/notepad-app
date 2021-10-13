@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import SignUp from "./SignUp"
 import SignIn from "./SignIn"
 import Profile from "./Profile"
@@ -12,6 +12,7 @@ import {
   Link
 } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
+import ResetPassword from "./ResetPassword";
 
 function App() {
   return (
@@ -40,6 +41,17 @@ function App() {
             </Container>
           </Route>
 
+          <Route path="/reset-password">
+            <Container
+              className="d-flex align-items-center justify-content-center"
+              style={{ minHeight: "100vh" }}
+            >
+              <div className="w-100" style={{ maxWidth: "400px" }}>
+                <ResetPassword/>
+              </div>
+            </Container>
+          </Route>
+          
           <PrivateRoute path="/profile" component={Profile}/>
 
           <PrivateRoute exact path="/" component={Dashboard}/>
