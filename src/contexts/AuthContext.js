@@ -17,12 +17,13 @@ export function AuthProvider({ children }) {
     return createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
-        //const user = userCredential.user;
+        const user = userCredential.user;
         //console.log(user)
       })
       .catch((error) => {
-        //const errorCode = error.code;
-        //const errorMessage = error.message;
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        throw new Error(errorMessage)
         //console.log(errorMessage)
       });
   }
@@ -31,12 +32,13 @@ export function AuthProvider({ children }) {
     return signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
-        //const user = userCredential.user;
+        const user = userCredential.user;
         //console.log(user)
       })
       .catch((error) => {
-        //const errorCode = error.code;
-        //const errorMessage = error.message;
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        throw new Error(errorMessage)
         //console.log(errorMessage)
       });
   }
